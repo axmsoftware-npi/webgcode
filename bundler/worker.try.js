@@ -22,7 +22,7 @@
     }
 };
  */
-importScripts('../bundle/webGcodeWidget.bundle.js');
+importScripts('../dist/webGcodeWidget.bundle.js');
 define(['cnc/cam/pocket', 'cnc/cam/operations', 'cnc/gcode/parser', 'cnc/gcode/simulation', 'cnc/util', 'cnc/gcode/gcodeSimulation', 'cnc/ui/asyncUI', 'THREE', 'cnc/maths/slicer', 'cnc/cam/toolpath'],
     function (pckt, opertns, parsr, simulatn, utl, gcodeSimulatn, asncUI, THRE, slicr, toolpth) {
         return {

@@ -1,0 +1,14 @@
+{{view Simulator.GraphicView}}
+<div class="editBlock">
+    {{#if usingGcode}}
+        {{gcode-editor content=code annotations=errors currentRow=currentRow}}
+    {{else}}
+        {{js-editor content=jscode annotations=errors currentRow=currentRow}}
+    {{/if}}
+    <button class="simulateButton" {{action "simulate"}} {{bind-attr disabled="computing"}}>Simulate</button>
+    {{#if computing}}
+        <div class="loader">&nbsp;</div>
+    {{else}}
+        {{partial "jobView"}}
+    {{/if}}
+</div>
